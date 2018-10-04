@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card>
+    <app-shopping-edit></app-shopping-edit>
+  </mat-card>
+  <br />
+  <mat-card>
+    <p>The shopping list</p>
+    <mat-list *ngFor="let ingredient of ingredients">
+      <mat-list-item> {{ingredient.name}} ({{ingredient.amount}}) </mat-list-item>
+    </mat-list>
+  </mat-card>
+</mat-card>

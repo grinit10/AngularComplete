@@ -1,0 +1,29 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button>
+      <mat-icon (click)="snav.toggle()">menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Recipe Book</h1>
+    <span class="example-spacer"></span>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>Save Data</button>
+      <button mat-menu-item>Fetch Data</button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'push'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="59" class="mat-sidenav" color="primary">
+      <mat-nav-list>
+        <mat-list-item routerLink="/createapp" *ngFor="let nav of fillerNav" class="nav-list-text">{{nav}}</mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

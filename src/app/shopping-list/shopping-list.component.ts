@@ -11,6 +11,13 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient("Apple", 5),
     new Ingredient("Banana", 10)
   ];
+
+  public selectdIngrdnt: Ingredient;
+
+  selectIngredient(ingrdnt) {
+    this.selectdIngrdnt = ingrdnt;
+  }
+
   constructor() {}
 
   ngOnInit() {}

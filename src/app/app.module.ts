@@ -77,7 +77,8 @@ import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-ed
     MatMenuModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

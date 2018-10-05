@@ -1,16 +1,17 @@
 <form class="example-form">
   <div>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Name" value="{{selectedIngredient.name}}">
+      <input matInput #ingredientName placeholder="Name" value="{{selectedIngredient?.name}}" (value)="selectedIngredient?.name">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Amount" type="number" value="{{selectedIngredient.amount}}">
+      <input matInput #ingredientAmount placeholder="Amount" type="number" value="{{selectedIngredient?.amount}}"
+        (value)="selectedIngredient?.amount">
     </mat-form-field>
   </div>
 
   <div>
-    <button mat-raised-button color="primary">Add</button>
+    <button mat-raised-button color="primary" (click)='onAddClick(ingredientName.value, ingredientAmount.value)'>Add</button>
     &nbsp;
     <button mat-raised-button color="warn">Delete</button>
     &nbsp;

@@ -1,3 +1,36 @@
-<p>
-  recipe-detail works!
-</p>
+<mat-card>
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        <h1>{{selectedRecipe?.name}}</h1>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)='addToShoppingList(selectedRecipe?.ingredients)'>
+            <mat-icon>add_shopping_cart</mat-icon>
+            <span>Add to shopping list</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>create</mat-icon>
+            <span>Edit Recipe</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>clear</mat-icon>
+            <span>Delete Recipe</span>
+          </button>
+        </mat-menu>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="selectedRecipe?.imagePath" alt={{selectedRecipe?.name}}>
+    <mat-card-content>
+      <p>{{selectedRecipe?.description}} </p>
+    </mat-card-content>
+    <mat-list *ngFor='let ingrdnt of selectedRecipe?.ingredients'>
+      <mat-list-item>{{ingrdnt.name}} ({{ingrdnt.amount}}) </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-card>
+</mat-card>
+<br />

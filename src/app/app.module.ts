@@ -1,3 +1,5 @@
+import { ShoppingService } from "./shopping-list/shopping.service";
+import { RecipeService } from "./recipes/recipe.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -80,7 +82,7 @@ import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-ed
     MatInputModule,
     MatRadioModule
   ],
-  providers: [],
+  providers: [RecipeService, ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

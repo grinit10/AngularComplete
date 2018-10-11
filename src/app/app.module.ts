@@ -1,3 +1,4 @@
+import { AppRoutingModule } from "./app.routing.module";
 import { ShoppingService } from "./shopping-list/shopping.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { BrowserModule } from "@angular/platform-browser";
@@ -63,6 +64,7 @@ import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-ed
     ShoppingEditComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -80,7 +82,8 @@ import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-ed
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatGridListModule
   ],
   providers: [RecipeService, ShoppingService],
   bootstrap: [AppComponent]

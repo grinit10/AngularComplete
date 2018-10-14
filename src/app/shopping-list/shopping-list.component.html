@@ -1,14 +1,12 @@
 <mat-card>
-  <mat-card>
-    <app-shopping-edit [selectedIngredient]="selectdIngrdnt"></app-shopping-edit>
-  </mat-card>
-  <br />
-  <mat-card>
-    <p>The shopping list</p>
-    <mat-list *ngFor="let ingredient of ingredients">
-      <mat-list-item (click)='selectIngredient(ingredient)'>
-        <mat-radio-button></mat-radio-button> &nbsp; {{ingredient.name}} ({{ingredient.amount}})
-      </mat-list-item>
-    </mat-list>
-  </mat-card>
+  <app-shopping-edit [selectedIngredient]="selectdIngrdnt"></app-shopping-edit>
+</mat-card>
+<br />
+<mat-card>
+  <p>The shopping list</p>
+  <mat-list *ngFor="let ingredient of ingredients">
+    <mat-list-item (click)='selectIngredient(ingredient)'>
+      <mat-radio-button></mat-radio-button> &nbsp; {{ingredient.name}} ({{ingredient.amount}})
+    </mat-list-item>
+  </mat-list>
 </mat-card>

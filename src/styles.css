@@ -3,8 +3,3 @@
 .example-spacer {
   flex: 1 1 auto;
 }
-
-.example-card {
-  width: 70%;
-  max-width: 70%;
-}

@@ -1,1 +1,14 @@
+.parent-card {
+  width: 100%;
+}
 
+.child-card {
+  width: 25%;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+}
